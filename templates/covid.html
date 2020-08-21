@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<title>cooooovid</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">covid</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</nav>
+
+<div class='container'>
+<h2 style="
+    text-align: center;
+    color: red;
+    text-transform: capitalize;
+    font-style: oblique;
+">coooovid</h2>
+
+
+
+<form action="/co" method="POST"> 
+{% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlInput1">fever</label>
+    <input type="text" class="form-control" name="fever" id="fever" placeholder="fever">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">body pain</label>
+    <select class="form-control" name="bodypain"id="bodypain">
+      <option value='0'>no pain</option>
+      <option value='1'>yes pain</option> 
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">age</label>
+    <input type="text" class="form-control" name="age" id="age" placeholder="age">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">runny nose</label>
+    <select class="form-control" name="runnynose"id="runnynose">
+      <option value='0'>no</option>
+      <option value='1'>yes</option> 
+    </select>
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">diffuclty in breathing</label>
+    <select class="form-control" name="diffbreath" id="diffbreath">
+      <option value='0'>no</option>
+      <option value='1'>yes</option> 
+    </select>
+  </div>
+  <button class="btn btn-dark">Submit</button>
+</form>
+
+
+
+
+</div>
+</body>
+</html>
